@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" fill="#ffffff" rx="12" />
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central"
+        font-family="Segoe UI, Roboto, sans-serif"
+        font-size="34" fill="#1e1e1e" font-weight="300" letter-spacing="1">
+    AM
+  </text>
+</svg>

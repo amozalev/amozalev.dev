@@ -1,0 +1,120 @@
+@import '@fontsource/ibm-plex-mono/100.css';
+@import '@fontsource/ibm-plex-mono/200.css';
+@import '@fontsource/ibm-plex-mono/300.css';
+@import '@fontsource/ibm-plex-mono/400.css';
+@import '@fontsource/ibm-plex-mono/500.css';
+@import '@fontsource/ibm-plex-mono/600.css';
+@import '@fontsource/ibm-plex-mono/700.css';
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* Palette & themes. */
+
+:root {
+    --color-fill: #212737;
+    --color-text-base: #EAEDF3;
+    --color-accent: #FF6B01;
+    --color-card: #343F60;
+    --color-card-muted: #8A3302;
+    --color-border: #AB4B08;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-fill: #212737;
+        --color-text-base: #EAEDF3;
+        --color-accent: #FF6B01;
+        --color-card: #343F60;
+        --color-card-muted: #8A3302;
+        --color-border: #AB4B08;
+        --single-line-code: #121212;
+    }
+}
+
+body {
+    background-color: var(--color-fill);
+    color: var(--color-text-base);
+}
+
+/* Typography & vertical rhythm. */
+
+:root {
+    /*--ff-text: THICCCBOI, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;*/
+    --ff-text: 'IBM Plex Mono', monospace;
+    --ff-code: 'IBM Plex Mono', monospace;
+
+    --fs-regular: 1rem;
+    --fs-smaller: 0.75em;
+    --fs-tiny: 0.5em;
+}
+
+body {
+    font-family: var(--ff-text);
+    font-size: var(--fs-regular);
+    line-height: 1.6;
+}
+
+code,
+pre {
+    font-family: var(--ff-code);
+    tab-size: 4;
+}
+
+pre {
+    padding: 15px;
+    max-inline-size: 100%;
+    border-inline-start-style: solid;
+}
+
+pre > code {
+    display: block;
+    padding: 1em;
+    overflow-x: auto;
+}
+
+:not(pre) > code {
+    padding: 0.1em 0.2em;
+    background: var(--single-line-code);
+    border-radius: 3px;
+}
+
+/* Controls, and accents. */
+
+a {
+    color: var(--ff-text);
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    /*text-underline-offset: 8px;*/
+
+    &:hover {
+        color: var(--color-accent);
+    }
+}
+
+a:hover,
+a:focus {
+    --color: var(--color-accent);
+}
+
+h1, h2 {
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+}
