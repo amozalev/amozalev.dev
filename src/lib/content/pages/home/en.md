@@ -2,4 +2,4 @@ Hi! I'm Alexey, a web developer. Here I mostly write about development, my exper
 encountered.
 
 Currently, I work as a senior frontend developer at [Replan.city](https://replan.city), where I’m responsible for the
-entire frontend development — from UI to CI processes.
+entire frontend development.
