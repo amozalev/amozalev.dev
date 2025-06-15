@@ -25,9 +25,9 @@ const config = {
 			extensions: ['.md'],
 			remarkPlugins: [unwrapImages],
 			rehypePlugins: [slugify, [linkHeadings, { behavior: 'append' }]],
-			layout: {
-				_: './src/components/PostLayout.svelte'
-			},
+			// layout: {
+			// 	_: './src/components/PostLayout.svelte'
+			// },
 			highlight: {
 				highlighter: async (code, lang = 'text') => {
 					const highlighter = await createHighlighter({
