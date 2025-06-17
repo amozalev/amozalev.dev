@@ -11,7 +11,7 @@
 
 	const { name, siteURL, siteName } = author;
 	const url = `${siteURL}/${slug}`;
-	const imagePath = `/images/${slug}/${image}`;
+	const imageURL = `${siteURL}/images/${slug}/${image}`;
 </script>
 
 <svelte:head>
@@ -25,7 +25,7 @@
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={description} />
 	{#if image}
-		<meta property="og:image" content={imagePath} />
+		<meta property="og:image" content={imageURL} />
 	{/if}
 	<meta property="og:url" content={url} />
 	<meta property="og:site_name" content={siteName} />
@@ -35,7 +35,7 @@
 	<meta name="twitter:title" content={title} />
 	<meta name="twitter:description" content={description} />
 	{#if image}
-		<meta name="twitter:image" content={imagePath} />
+		<meta name="twitter:image" content={imageURL} />
 	{/if}
 	<!--	<meta name="twitter:site" content={twitterHandle} />-->
 
