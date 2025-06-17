@@ -8,7 +8,7 @@
 </script>
 
 <header>
-	<h1>{title}</h1>
+	<h1 class="post-title">{title}</h1>
 	<div class="date">
 		<svelte:component this={CalendarIcon} />
 		{datetime}
@@ -24,9 +24,8 @@
         flex-direction: column;
     }
 
-    h1 {
+    .post-title {
         color: var(--color-accent);
-        font-size: 24px;
         line-height: 150%;
     }
 

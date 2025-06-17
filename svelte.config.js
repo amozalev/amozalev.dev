@@ -1,11 +1,14 @@
 import { mdsvex, escapeSvelte } from 'mdsvex';
-// import adapter from '@sveltejs/adapter-auto';
+import path from 'path';
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import unwrapImages from 'rehype-unwrap-images';
 import linkHeadings from 'rehype-autolink-headings';
 import slugify from 'rehype-slug';
 import { createHighlighter } from 'shiki';
+import { fileURLToPath } from 'node:url';
+
+const dirname = path.resolve(fileURLToPath(import.meta.url), '../');
 
 const config = {
 	kit: {
@@ -13,7 +16,7 @@ const config = {
 			fallback: '404.html'
 		}),
 		paths: {
-			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
+			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH,
 		},
 		prerender: {
 			handleHttpError: 'warn',
@@ -26,9 +29,9 @@ const config = {
 			extensions: ['.md'],
 			remarkPlugins: [unwrapImages],
 			rehypePlugins: [slugify, [linkHeadings, { behavior: 'append' }]],
-			// layout: {
-			// 	_: './src/components/PostLayout.svelte'
-			// },
+			layout: {
+				_: path.join(dirname, `./src/components/PostLayout.svelte`)
+			},
 			highlight: {
 				highlighter: async (code, lang = 'text') => {
 					const highlighter = await createHighlighter({

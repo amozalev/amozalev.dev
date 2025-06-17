@@ -5,12 +5,13 @@
 	export let title: string;
 	export let description: string = '';
 	export let slug: string;
-	export let image: string = '';
+	export let image: string = ``;
 
 	export let type: PageMetaType = 'website';
 
 	const { name, siteURL, siteName } = author;
 	const url = `${siteURL}/${slug}`;
+	const imagePath = `/images/${slug}/${image}`;
 </script>
 
 <svelte:head>
@@ -24,7 +25,7 @@
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={description} />
 	{#if image}
-		<meta property="og:image" content={image} />
+		<meta property="og:image" content={imagePath} />
 	{/if}
 	<meta property="og:url" content={url} />
 	<meta property="og:site_name" content={siteName} />
@@ -34,7 +35,7 @@
 	<meta name="twitter:title" content={title} />
 	<meta name="twitter:description" content={description} />
 	{#if image}
-		<meta name="twitter:image" content={image} />
+		<meta name="twitter:image" content={imagePath} />
 	{/if}
 	<!--	<meta name="twitter:site" content={twitterHandle} />-->
 

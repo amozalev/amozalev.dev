@@ -9,8 +9,13 @@
 </figure>
 
 <style>
-	img {
-			width: 100%;
-			height: auto;
-	}
+    figure {
+        margin: 0;
+        padding: 0;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
 </style>

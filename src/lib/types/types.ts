@@ -5,6 +5,7 @@ export type PostModule = {
 		title: string;
 		datetime: string;
 		description?: string;
+		image?: string;
 		slug: string;
 		tags?: string[];
 		materials?: string[];

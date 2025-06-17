@@ -7,7 +7,7 @@
 	$: ({ meta, content } = data);
 </script>
 
-<MetaTags title={meta.title} slug={meta.slug} description={meta.description ?? ''} type="article" />
+<MetaTags title={meta.title} slug={meta.slug} description={meta.description ?? ''} image={meta.image} type="article" />
 
 <article>
 	<PostTitle post={meta} />
@@ -20,9 +20,5 @@
         flex-direction: column;
         gap: 32px;
         width: 100%;
-    }
-
-    :where(article, aside, nav, section) h1 {
-        font-size: 24px;
     }
 </style>
