@@ -107,7 +107,7 @@ a:focus {
     --color: var(--color-accent);
 }
 
-h1, h2 {
+:where(article, aside, nav, section) h1, h2 {
     font-size: 24px;
     margin: 0;
     padding: 0;
