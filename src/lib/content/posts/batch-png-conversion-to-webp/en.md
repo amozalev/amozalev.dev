@@ -2,8 +2,8 @@
 title: Batch PNG images conversion to WEBP in JavaScript application.
 description: How to develop a website layout from a Figma template instantly using optimized WEBP images instead of exported PNG ones.
 datetime: 2025-06-09
-image: cover1.webp
-ogImage: cover1.png
+image: cover.webp
+ogImage: cover.png
 tags:
   - javascript
   - node
