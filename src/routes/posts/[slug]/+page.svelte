@@ -21,4 +21,9 @@
         gap: 32px;
         width: 100%;
     }
+
+    :where(h1) {
+        margin-block: 0.67em;
+        font-size: 2em;
+    }
 </style>
