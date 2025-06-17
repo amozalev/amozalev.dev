@@ -11,7 +11,7 @@
 
 	const { name, siteURL, siteName } = author;
 	const url = `${siteURL}/${slug}`;
-	const imageURL = `${siteURL}/images/${slug}/${image}`;
+	const imageURL = `${siteURL}/images/posts/${slug}/${image}`;
 </script>
 
 <svelte:head>
