@@ -7,7 +7,13 @@
 	$: ({ meta, content } = data);
 </script>
 
-<MetaTags title={meta.title} slug={meta.slug} description={meta.description ?? ''} image={meta.image} type="article" />
+<MetaTags
+	title={meta.title}
+	slug={meta.slug}
+	description={meta.description ?? ''}
+	ogImage={meta.ogImage}
+	type="article"
+/>
 
 <article>
 	<PostTitle post={meta} />

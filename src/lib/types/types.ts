@@ -6,6 +6,7 @@ export type PostModule = {
 		datetime: string;
 		description?: string;
 		image?: string;
+		ogImage?: string;
 		slug: string;
 		tags?: string[];
 		materials?: string[];

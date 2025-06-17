@@ -5,13 +5,13 @@
 	export let title: string;
 	export let description: string = '';
 	export let slug: string;
-	export let image: string = ``;
+	export let ogImage: string = ``;
 
 	export let type: PageMetaType = 'website';
 
 	const { name, siteURL, siteName } = author;
 	const url = `${siteURL}/${slug}`;
-	const imageURL = `${siteURL}/images/posts/${slug}/${image}`;
+	const ogImageURL = `${siteURL}/images/posts/${slug}/${ogImage}`;
 </script>
 
 <svelte:head>
@@ -24,8 +24,8 @@
 	<meta property="og:type" content={type} />
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={description} />
-	{#if image}
-		<meta property="og:image" content={imageURL} />
+	{#if ogImage}
+		<meta property="og:image" content={ogImageURL} />
 	{/if}
 	<meta property="og:url" content={url} />
 	<meta property="og:site_name" content={siteName} />
@@ -34,9 +34,9 @@
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={title} />
 	<meta name="twitter:description" content={description} />
-	{#if image}
-		<meta name="twitter:image" content={imageURL} />
-	{/if}
+	<!--{#if image}-->
+	<!--	<meta name="twitter:image" content={imageURL} />-->
+	<!--{/if}-->
 	<!--	<meta name="twitter:site" content={twitterHandle} />-->
 
 	<!-- Canonical -->

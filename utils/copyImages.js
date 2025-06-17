@@ -34,7 +34,7 @@ async function copyFiles(source, target) {
 			if (entry.match(/\.(jpg|png)$/i)) {
 				await convertImgToWebp(source, target);
 				// await convertImgToAvif(sourcePath, target);
-				continue;
+				// continue;
 			}
 			await fs.copyFile(sourcePath, targetPath);
 		}
