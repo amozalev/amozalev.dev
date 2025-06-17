@@ -22,8 +22,7 @@
         width: 100%;
     }
 
-    :where(h1) {
-        margin-block: 0.67em;
-        font-size: 2em;
+    :where(article, aside, nav, section) h1 {
+        font-size: 24px;
     }
 </style>
