@@ -1,8 +1,11 @@
 <script>
 	import { author } from '$lib/scripts/author.js';
+	import MetaTags from '../../components/MetaTags.svelte';
 
 	let { email, github, linkedin } = author;
 </script>
+
+<MetaTags title="Contacts" slug="contacts" type="website" />
 
 <div class="contacts">
 	<div>

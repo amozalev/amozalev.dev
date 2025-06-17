@@ -12,3 +12,5 @@ export type PostModule = {
 	};
 	default: typeof SvelteComponent;
 };
+
+export type PageMetaType = 'website' | 'article' | 'video.movie' | 'book' | 'profile';

@@ -1,6 +1,6 @@
 ---
-title: How to build a website layout from a Figma template instantly using optimized WebP images instead of PNGs.
-description: Easily converting multiple images from Figma template to Webp in JavaScript application.
+title: Batch PNG images conversion to WEBP in JavaScript application.
+description: How to develop a website layout from a Figma template instantly using optimized WEBP images instead of exported PNG ones.
 datetime: 2025-06-09
 tags:
   - javascript

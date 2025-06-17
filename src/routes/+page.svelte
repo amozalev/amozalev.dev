@@ -1,8 +1,12 @@
 <script lang="ts">
+	import MetaTags from '../components/MetaTags.svelte';
+
 	export let data;
 
 	$: ({ content } = data);
 </script>
+
+<MetaTags title="Hi!" slug="" type="website" />
 
 <div class="home-page">
 	<div class="photo">
@@ -27,7 +31,6 @@
         display: flex;
         justify-content: center;
         width: 100%;
-        flex: 0 1 400px;
     }
 
     picture {
@@ -56,12 +59,19 @@
     .about {
         display: flex;
         flex-direction: column;
-        flex: 1 1 400px;
     }
 
     @media (min-width: 550px) {
         .home-page {
             flex-direction: row;
+        }
+
+        .photo {
+            justify-content: left;
+        }
+
+        .about {
+            flex: 1 1 400px;
         }
     }
 </style>

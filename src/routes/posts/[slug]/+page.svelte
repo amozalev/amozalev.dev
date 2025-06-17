@@ -1,16 +1,13 @@
 <script lang="ts">
 	import PostTitle from '../../../components/PostTitle.svelte';
+	import MetaTags from '../../../components/MetaTags.svelte';
 
 	export let data;
 
 	$: ({ meta, content } = data);
 </script>
 
-<svelte:head>
-	<title>{meta.title}</title>
-	<meta property="og:type" content="article" />
-	<meta property="og:title" content={meta.title} />
-</svelte:head>
+<MetaTags title={meta.title} slug={meta.slug} description={meta.description ?? ''} type="article" />
 
 <article>
 	<PostTitle post={meta} />
