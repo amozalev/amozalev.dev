@@ -1,11 +1,12 @@
 <script>
 	export let src;
 	export let alt;
+	export let title;
 </script>
 
 <figure>
 	<img {src} {alt} />
-	<figcaption>{alt}</figcaption>
+	<figcaption>{title}</figcaption>
 </figure>
 
 <style>
