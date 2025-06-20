@@ -21,23 +21,24 @@
 	<meta name="robots" content="index, follow" />
 
 	<!-- Open Graph -->
+	<meta property="og:url" content={url} />
 	<meta property="og:type" content={type} />
+	<meta property="og:site_name" content={siteName} />
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={description} />
 	{#if ogImage}
 		<meta property="og:image" content={ogImageURL} />
 	{/if}
-	<meta property="og:url" content={url} />
-	<meta property="og:site_name" content={siteName} />
 
 	<!-- Twitter -->
 	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="twitter:domain" content={author.siteURL}>
+	<meta property="twitter:url" content={url}>
 	<meta name="twitter:title" content={title} />
 	<meta name="twitter:description" content={description} />
-	<!--{#if image}-->
-	<!--	<meta name="twitter:image" content={imageURL} />-->
-	<!--{/if}-->
-	<!--	<meta name="twitter:site" content={twitterHandle} />-->
+	{#if ogImage}
+		<meta name="twitter:image" content={ogImageURL} />
+	{/if}
 
 	<!-- Canonical -->
 	<link rel="canonical" href={url} />
