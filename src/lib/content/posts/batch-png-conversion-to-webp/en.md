@@ -10,7 +10,6 @@ tags:
 ---
 
 ![batch png conversion to webp](/images/posts/batch-png-conversion-to-webp/{image})
-
 In one of the projects, in which I used a Figma template, I
 realized that I wanted to use WEBP images in the code right away. In Figma files, images can be copied as PNG,
 SVG, or code. Thus, already at the beginning of the work, I wanted to have WEBP files on hand.

@@ -36,5 +36,9 @@
     main {
         display: flex;
         flex-grow: 1;
+        flex-direction: column;
+				gap: 20px;
+        width: 100%;
+        height: 100%;
     }
 </style>

@@ -118,3 +118,8 @@ ul {
     padding: 0;
     list-style-position: inside;
 }
+
+p {
+    margin: 0;
+    padding: 0;
+}

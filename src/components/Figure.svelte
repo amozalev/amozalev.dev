@@ -5,7 +5,7 @@
 </script>
 
 <figure>
-	<img {src} {alt} />
+	<img fetchpriority="high" {src} {alt} />
 	<figcaption>{title}</figcaption>
 </figure>
 

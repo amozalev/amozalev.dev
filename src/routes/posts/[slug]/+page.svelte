@@ -15,16 +15,5 @@
 	type="article"
 />
 
-<article>
-	<PostTitle post={meta} />
-	<svelte:component this={content} />
-</article>
-
-<style>
-    article {
-        display: flex;
-        flex-direction: column;
-        gap: 32px;
-        width: 100%;
-    }
-</style>
+<PostTitle post={meta} />
+<svelte:component this={content} />

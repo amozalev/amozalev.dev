@@ -7,23 +7,16 @@
 	$: ({ title, datetime, description } = post);
 </script>
 
-<header>
-	<h1 class="post-title">{title}</h1>
-	<div class="date">
-		<svelte:component this={CalendarIcon} />
-		{datetime}
-	</div>
-	<div class="description">
-		{description}
-	</div>
-</header>
+<h1 class="post-title">{title}</h1>
+<div class="date">
+	<svelte:component this={CalendarIcon} />
+	{datetime}
+</div>
+<div class="description">
+	{description}
+</div>
 
 <style>
-    header {
-        display: flex;
-        flex-direction: column;
-    }
-
     .post-title {
         color: var(--color-accent);
         line-height: 150%;
