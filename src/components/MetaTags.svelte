@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { author } from '$lib/scripts/author';
-	import type { PageMetaType } from '$lib/types/types';
+	import type { PageMetaType } from '$lib/types';
 
 	export let title: string;
 	export let description: string = '';

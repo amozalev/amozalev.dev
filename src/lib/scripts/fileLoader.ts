@@ -1,4 +1,4 @@
-import type { PostModule } from '$lib/types/types';
+import type { PostModule } from '$lib/types';
 import { formatDate } from '$lib/scripts/utils';
 import { error } from '@sveltejs/kit';
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { type PostModule } from '$lib/types/types';
+	import { type PostModule } from '$lib/types';
 	import PostCardTitle from './PostCardTitle.svelte';
 
 	export let post: PostModule['metadata'];

@@ -17,8 +17,9 @@
 <style>
     header {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         align-items: center;
+				gap: 20px;
         padding: 36px 0;
         border-bottom: 1px solid var(--color-border);
     }
@@ -32,8 +33,7 @@
 
     .menu {
         display: flex;
-        justify-content: space-evenly;
-        align-items: center;
+				flex-direction: column;
         gap: 20px;
         list-style: none;
     }
@@ -52,5 +52,20 @@
         text-decoration-line: underline;
         text-underline-offset: 4px;
         text-decoration-style: wavy;
+    }
+
+    @media (min-width: 550px) {
+        header {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+						gap: unset;
+        }
+
+        .menu {
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
     }
 </style>

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import CalendarIcon from './icons/CalendarIcon.svelte';
-	import type { PostModule } from '$lib/types/types';
+	import type { PostModule } from '$lib/types';
 	import { formatDate } from '$lib/scripts/utils';
 
 	export let post: PostModule['metadata'];
