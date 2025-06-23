@@ -5,5 +5,6 @@ export const author = {
 	linkedin: "https://www.linkedin.com/in/amozalev/",
 	employer: "https://replan.city/",
 	siteURL: "https://amozalev.dev",
-	siteName: "Blog of Alex Mozalev about web development"
+	siteName: "Blog of Alex Mozalev about web development",
+	blogGithubRepository: "amozalev.dev"
 }

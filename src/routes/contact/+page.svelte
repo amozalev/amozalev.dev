@@ -2,7 +2,7 @@
 	import { author } from '$lib/scripts/author.js';
 	import MetaTags from '../../components/MetaTags.svelte';
 
-	let { email, github, linkedin } = author;
+	let { email, github, linkedin, blogGithubRepository } = author;
 </script>
 
 <MetaTags title="Contacts" slug="contacts" type="website" />
@@ -18,20 +18,22 @@
 			<li>Email: {email.replace('@', '[at]')}</li>
 		</ul>
 	</div>
+	<p>
+		You can support and hit a ⭐ in the <a href={`${github}/${blogGithubRepository}`}>Github repository</a> of this blog.
+	</p>
 </div>
 
 <style>
     .contacts {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 60px;
     }
 
     .links ul {
         list-style: none;
-
-        li {
-            margin-top: 15px;
-        }
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
     }
 </style>
