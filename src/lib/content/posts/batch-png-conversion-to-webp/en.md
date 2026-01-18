@@ -5,8 +5,8 @@ datetime: 2025-06-09
 image: cover.webp
 ogImage: cover.png
 tags:
-  - javascript
-  - node
+    - javascript
+    - node
 ---
 
 ![batch png conversion to webp](/images/posts/batch-png-conversion-to-webp/{image})
@@ -46,8 +46,8 @@ import imagemin from 'imagemin';
 import webp from 'imagemin-webp';
 
 await imagemin(['src/assets/images/`.{jpg,png}'], {
-	destination: 'src/assets/images',
-	plugins: [webp({ quality: 60 })],
+    destination: 'src/assets/images',
+    plugins: [webp({ quality: 60 })]
 });
 ```
 
@@ -57,12 +57,12 @@ commands for development and production, respectively.
 
 ```json
 {
-  "scripts": {
-    "prestart": "node webp-images-generation.mjs",
-    "start": "webpack serve --mode development --config webpack.dev.config.js",
-    "prebuild": "node webp-images-generation.mjs",
-    "build": "webpack --mode production --config webpack.prod.config.js"
-  }
+    "scripts": {
+        "prestart": "node webp-images-generation.mjs",
+        "start": "webpack serve --mode development --config webpack.dev.config.js",
+        "prebuild": "node webp-images-generation.mjs",
+        "build": "webpack --mode production --config webpack.prod.config.js"
+    }
 }
 ```
 

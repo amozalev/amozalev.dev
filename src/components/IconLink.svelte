@@ -1,13 +1,13 @@
 <script lang="ts">
-	export let icon;
-	export let url: string;
-	export let ariaLabel: string;
+    export let icon;
+    export let url: string;
+    export let ariaLabel: string;
 </script>
 
 <a href={url} class="icon-btn" aria-label={ariaLabel}>
-	<div class="icon-btn__inner">
-		<svelte:component this={icon} />
-	</div>
+    <div class="icon-btn__inner">
+        <svelte:component this={icon} />
+    </div>
 </a>
 
 <style>

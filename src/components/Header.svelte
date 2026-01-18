@@ -1,17 +1,17 @@
 <script lang="ts">
-	import { page } from '$app/state';
+    import { page } from '$app/state';
 
-	let path = page.url.pathname;
+    let path = page.url.pathname;
 </script>
 
 <header>
-	<a class="home-link" href="/">Alex Mozalev</a>
-	<nav>
-		<ul class="menu">
-			<li><a aria-current={path.startsWith('/posts')} href="/posts">Posts</a></li>
-			<li><a aria-current={path.startsWith('/contact')} href="/contact">Contact</a></li>
-		</ul>
-	</nav>
+    <a class="home-link" href="/">Alex Mozalev</a>
+    <nav>
+        <ul class="menu">
+            <li><a aria-current={path.startsWith('/posts')} href="/posts">Posts</a></li>
+            <li><a aria-current={path.startsWith('/contact')} href="/contact">Contact</a></li>
+        </ul>
+    </nav>
 </header>
 
 <style>
@@ -19,7 +19,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-				gap: 20px;
+        gap: 20px;
         padding: 36px 0;
         border-bottom: 1px solid var(--color-border);
     }
@@ -33,7 +33,7 @@
 
     .menu {
         display: flex;
-				flex-direction: column;
+        flex-direction: column;
         gap: 20px;
         list-style: none;
     }
@@ -59,7 +59,7 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-						gap: unset;
+            gap: unset;
         }
 
         .menu {

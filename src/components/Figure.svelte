@@ -1,12 +1,12 @@
 <script>
-	export let src;
-	export let alt;
-	export let title;
+    export let src;
+    export let alt;
+    export let title;
 </script>
 
 <figure>
-	<img fetchpriority="high" {src} {alt} />
-	<figcaption>{title}</figcaption>
+    <img fetchpriority="high" {src} {alt} />
+    <figcaption>{title}</figcaption>
 </figure>
 
 <style>

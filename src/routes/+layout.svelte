@@ -1,17 +1,17 @@
 <script lang="ts">
-	import '../app.css';
-	import Header from '../components/Header.svelte';
-	import Footer from '../components/Footer.svelte';
+    import '../app.css';
+    import Header from '../components/Header.svelte';
+    import Footer from '../components/Footer.svelte';
 </script>
 
 <div class="wrapper">
-	<div class="container">
-		<Header />
-		<main>
-			<slot />
-		</main>
-		<Footer />
-	</div>
+    <div class="container">
+        <Header />
+        <main>
+            <slot />
+        </main>
+        <Footer />
+    </div>
 </div>
 
 <style>
@@ -37,7 +37,7 @@
         display: flex;
         flex-grow: 1;
         flex-direction: column;
-				gap: 20px;
+        gap: 20px;
         width: 100%;
         height: 100%;
     }

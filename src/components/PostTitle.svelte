@@ -1,19 +1,19 @@
 <script lang="ts">
-	import CalendarIcon from './icons/CalendarIcon.svelte';
-	import type { PostModule } from '$lib/types';
+    import CalendarIcon from './icons/CalendarIcon.svelte';
+    import type { PostModule } from '$lib/types';
 
-	export let post: PostModule['metadata'];
+    export let post: PostModule['metadata'];
 
-	$: ({ title, datetime, description } = post);
+    $: ({ title, datetime, description } = post);
 </script>
 
 <h1 class="post-title">{title}</h1>
 <div class="date">
-	<svelte:component this={CalendarIcon} />
-	{datetime}
+    <svelte:component this={CalendarIcon} />
+    {datetime}
 </div>
 <div class="description">
-	{description}
+    {description}
 </div>
 
 <style>

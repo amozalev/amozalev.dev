@@ -1,8 +1,8 @@
 <script lang="ts">
-	import Posts from '../../components/Posts.svelte';
-	import MetaTags from '../../components/MetaTags.svelte';
+    import Posts from '../../components/Posts.svelte';
+    import MetaTags from '../../components/MetaTags.svelte';
 
-	export let data;
+    export let data;
 </script>
 
 <MetaTags title="Posts" slug="posts" type="article" />

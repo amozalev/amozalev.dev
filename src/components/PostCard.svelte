@@ -1,17 +1,17 @@
 <script lang="ts">
-	import { type PostModule } from '$lib/types';
-	import PostCardTitle from './PostCardTitle.svelte';
+    import { type PostModule } from '$lib/types';
+    import PostCardTitle from './PostCardTitle.svelte';
 
-	export let post: PostModule['metadata'];
+    export let post: PostModule['metadata'];
 </script>
 
 <div class="post-card">
-	<PostCardTitle {post} />
+    <PostCardTitle {post} />
 </div>
 
 <style>
     .post-card {
-				/*TODO обрезать текст*/
+        /*TODO обрезать текст*/
 
         /*display: flex;*/
         /*flex-direction: column;*/

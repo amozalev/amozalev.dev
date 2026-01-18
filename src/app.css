@@ -12,7 +12,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     width: 100%;
     height: 100%;
     padding: 0;
@@ -23,21 +24,21 @@ html, body {
 
 :root {
     --color-fill: #212737;
-    --color-text-base: #EAEDF3;
-    --color-accent: #FF6B01;
-    --color-card: #343F60;
-    --color-card-muted: #8A3302;
-    --color-border: #AB4B08;
+    --color-text-base: #eaedf3;
+    --color-accent: #ff6b01;
+    --color-card: #343f60;
+    --color-card-muted: #8a3302;
+    --color-border: #ab4b08;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --color-fill: #212737;
-        --color-text-base: #EAEDF3;
-        --color-accent: #FF6B01;
-        --color-card: #343F60;
-        --color-card-muted: #8A3302;
-        --color-border: #AB4B08;
+        --color-text-base: #eaedf3;
+        --color-accent: #ff6b01;
+        --color-card: #343f60;
+        --color-card-muted: #8a3302;
+        --color-border: #ab4b08;
         --single-line-code: #121212;
     }
 }
@@ -107,7 +108,8 @@ a:focus {
     --color: var(--color-accent);
 }
 
-h1, h2 {
+h1,
+h2 {
     font-size: 24px;
     margin: 0;
     padding: 0;

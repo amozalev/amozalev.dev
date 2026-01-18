@@ -1,22 +1,22 @@
 <script lang="ts">
-	import CalendarIcon from './icons/CalendarIcon.svelte';
-	import type { PostModule } from '$lib/types';
-	import { formatDate } from '$lib/scripts/utils';
+    import CalendarIcon from './icons/CalendarIcon.svelte';
+    import type { PostModule } from '$lib/types';
+    import { formatDate } from '$lib/scripts/utils';
 
-	export let post: PostModule['metadata'];
+    export let post: PostModule['metadata'];
 
-	$: ({ slug, title, datetime, description } = post);
+    $: ({ slug, title, datetime, description } = post);
 </script>
 
 <section>
-	<h2><a href="{slug}">{title}</a></h2>
-	<div class="date">
-		<svelte:component this={CalendarIcon} />
-		{formatDate(datetime)}
-	</div>
-	<div class="description">
-		{description}
-	</div>
+    <h2><a href={slug}>{title}</a></h2>
+    <div class="date">
+        <svelte:component this={CalendarIcon} />
+        {formatDate(datetime)}
+    </div>
+    <div class="description">
+        {description}
+    </div>
 </section>
 
 <style>

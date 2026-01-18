@@ -1,23 +1,23 @@
 <script lang="ts">
-	import MetaTags from '../components/MetaTags.svelte';
+    import MetaTags from '../components/MetaTags.svelte';
 
-	export let data;
+    export let data;
 
-	$: ({ content } = data);
+    $: ({ content } = data);
 </script>
 
 <MetaTags title="Hi!" slug="" type="website" />
 
 <div class="home-page">
-	<div class="photo">
-		<picture>
-			<source srcset="photos/me.webp" type="image/webp">
-			<img src="photos/me.jpg" alt="I'm on the Banjska Stena">
-		</picture>
-	</div>
-	<div class="about">
-		<svelte:component this={content} />
-	</div>
+    <div class="photo">
+        <picture>
+            <source srcset="photos/me.webp" type="image/webp" />
+            <img src="photos/me.jpg" alt="I'm on the Banjska Stena" />
+        </picture>
+    </div>
+    <div class="about">
+        <svelte:component this={content} />
+    </div>
 </div>
 
 <style>

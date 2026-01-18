@@ -1,12 +1,12 @@
 <script>
-	import { page } from '$app/state'
+    import { page } from '$app/state';
 </script>
 
 <div class="error_page">
-	<h1 class="error">{page.status}</h1>
-	<span class="icon">¯\_(ツ)_/¯</span>
-	<p class="description">{page.error?.message}</p>
-	<a class="go_back" href="/">Go back home</a>
+    <h1 class="error">{page.status}</h1>
+    <span class="icon">¯\_(ツ)_/¯</span>
+    <p class="description">{page.error?.message}</p>
+    <a class="go_back" href="/">Go back home</a>
 </div>
 
 <style>
