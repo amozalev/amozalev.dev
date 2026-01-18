@@ -11,7 +11,7 @@
 <div class="home-page">
     <div class="photo">
         <picture>
-            <source srcset="photos/me.webp" type="image/webp" />
+<!--            <source srcset="photos/me.webp" type="image/webp" />-->
             <img src="photos/me.jpg" alt="I'm on the Banjska Stena" />
         </picture>
     </div>
