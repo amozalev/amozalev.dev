@@ -13,7 +13,7 @@ tags:
     - docker
 ---
 
-![Общие типы API на NestJS для клиентов на SvelteKit и Telegram бота в Docker](/images/posts/shared-types-folder-in-docker-apps/{image})
+![Общие типы API на NestJS для клиентов на SvelteKit и Telegram бота в Docker](/images/posts/shared-api-types-nestjs-docker/{image})
 
 Когда в приложении есть API и несколько клиентов, появляются следующие потребности:
 
@@ -426,7 +426,7 @@ const config = {
 Этого достаточно, чтобы приложение видело `api_client` в docker контейнере (обратите внимание на volumes в dev конфигурации сервиса frontend). Volume с `api_client` монтируется в папку `app`.
 Однако в файловой системе хоста, папка `shared` лежит на один уровень выше, относительно корня сервиса, поэтому в IDE возникают ошибки ESlint или перестают работать подсказки типов.
 
-![ESlint error: Cannot find module $api or its corresponding type declaration](/images/posts/shared-types-folder-in-docker-apps/eslint_cannot_find_module.webp)
+![ESlint error: Cannot find module $api or its corresponding type declaration](/images/posts/shared-api-types-nestjs-docker/eslint_cannot_find_module.webp)
 
 Эту задачу я решил при помощи символьной ссылки на папку `shared/api_client`, которая лежит в папке `frontend`.
 

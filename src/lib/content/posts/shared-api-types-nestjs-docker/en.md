@@ -13,7 +13,7 @@ tags:
     - docker
 ---
 
-![Shared API types in NestJS for SvelteKit clients and a Telegram bot in Docker](/images/posts/shared-types-folder-in-docker-apps/{image})
+![Shared API types in NestJS for SvelteKit clients and a Telegram bot in Docker](/images/posts/shared-api-types-nestjs-docker/{image})
 
 ### Problem
 
@@ -435,7 +435,7 @@ This is sufficient for the application to see `api_client` inside the Docker con
 
 However, on the host filesystem, the shared directory is one level above the service root. This causes ESLint errors and broken type hints in the IDE.
 
-![ESlint error: Cannot find module $api or its corresponding type declaration](/images/posts/shared-types-folder-in-docker-apps/eslint_cannot_find_module.webp)
+![ESlint error: Cannot find module $api or its corresponding type declaration](/images/posts/shared-api-types-nestjs-docker/eslint_cannot_find_module.webp)
 
 I solved that by creating a symbolic link to `shared/api_client` inside the `frontend` directory:
 
