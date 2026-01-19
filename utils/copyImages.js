@@ -8,7 +8,7 @@ import imageminAvif from 'imagemin-avif';
 async function convertImgToWebp(sourcePath, targetPath) {
     await imagemin([sourcePath], {
         destination: sourcePath,
-        plugins: [webp({ quality: 60 })]
+        plugins: [webp({ quality: 90 })]
     });
 }
 

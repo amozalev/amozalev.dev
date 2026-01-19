@@ -435,11 +435,14 @@ This is sufficient for the application to see `api_client` inside the Docker con
 
 However, on the host filesystem, the shared directory is one level above the service root. This causes ESLint errors and broken type hints in the IDE.
 
-This issue was solved by creating a symbolic link to `shared/api_client` inside the `frontend` directory:
+![ESlint error: Cannot find module $api or its corresponding type declaration](/images/posts/shared-types-folder-in-docker-apps/eslint_cannot_find_module.webp)
+
+I solved that by creating a symbolic link to `shared/api_client` inside the `frontend` directory:
 
 ```
 api_client -> ../shared/api_client
 ```
+It should be mentioned that this solution may be fragile on a Windows OS.
 
 ### Bot
 
@@ -487,5 +490,6 @@ Minimal `package.json`:
 
 ### Conclusions
 
-This setup proved convenient when working with Docker Compose in both development and production environments.
-A more robust and universal, but also more time-consuming, solution would be to convert `shared/api_client` into a proper library.
+- This setup is quite convenient for me when working with Docker Compose, both in production and development environments.
+- Using a symbolic link is not an ideal solution and may not work on Windows.
+- A more reliable and universal, but also more time-consuming, solution would be to turn `shared/api_client` into a proper library.

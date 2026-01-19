@@ -425,13 +425,15 @@ const config = {
 
 Этого достаточно, чтобы приложение видело `api_client` в docker контейнере (обратите внимание на volumes в dev конфигурации сервиса frontend). Volume с `api_client` монтируется в папку `app`.
 Однако в файловой системе хоста, папка `shared` лежит на один уровень выше, относительно корня сервиса, поэтому в IDE возникают ошибки ESlint или перестают работать подсказки типов.
-![[Pasted image 20260117184122.png]]
+
+![ESlint error: Cannot find module $api or its corresponding type declaration](/images/posts/shared-types-folder-in-docker-apps/eslint_cannot_find_module.webp)
 
 Эту задачу я решил при помощи символьной ссылки на папку `shared/api_client`, которая лежит в папке `frontend`.
 
 ```
 api_client -> ../shared/api_client
 ```
+Важно упомянуть, что это решение может не работать на ОC Windows.
 
 ### bot
 
@@ -478,4 +480,6 @@ api_client -> ../shared/api_client
 
 ### Выводы
 
-Данная схема оказалась удобна мне при работе c Docker Compose, как в production, так и в development. Более надёжным и универсальным, но и более трудозатратным решением было бы преобразовать `shared/api_client` в библиотеку.
+- Данная схема достаточно удобна мне при работе c Docker Compose, как в production, так и в development.
+- Использование символьной ссылки- не идеальное решение. На Windows может не работать
+- Более надёжным и универсальным, но и более трудозатратным решением было бы преобразовать `shared/api_client` в библиотеку.
